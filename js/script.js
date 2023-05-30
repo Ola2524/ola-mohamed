@@ -105,3 +105,30 @@ $(document).ready(function(){
         }
     });
 });
+
+let previewPortfolio = document.querySelector('.portfolio-preview')
+let previewBox = document.querySelectorAll('.portfolio-preview .preview')
+
+console.log(document.querySelectorAll('.portfolio figure figcaption::after'));
+
+document.querySelectorAll('.portfolio figure').forEach(box => {
+    box.onclick = () =>{
+        let name = box.getAttribute('data-name')
+        previewBox.forEach(preview =>{
+            let target = preview.getAttribute('data-target')
+
+            console.log(target);
+            if(name == target){
+                previewPortfolio.style.display = 'flex'
+                preview.classList.add('active')
+            }
+        })
+    }
+})
+
+previewBox.forEach(close =>{
+    close.querySelector('.fa-xmark').onclick = () =>{
+        close.classList.remove('active');
+        previewPortfolio.style.display = 'none'
+    }
+})
