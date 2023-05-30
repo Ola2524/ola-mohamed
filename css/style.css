@@ -120,6 +120,7 @@ html{
     border-radius: 50%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     cursor: pointer;
+    z-index: 100;
 }
 
 #top-value{
@@ -208,6 +209,8 @@ nav .hire-btn:hover{
 
 .banner .buttons{
     margin-top: 40px;
+    display: flex;
+    text-align: center;
 }
 
 .banner .buttons a{
@@ -284,7 +287,7 @@ nav .hire-btn:hover{
     }
 
     .banner .text h1 span{
-        font-size: 50px;
+        font-size: 40px;
     }
 }
 
@@ -294,16 +297,16 @@ nav .hire-btn:hover{
         line-height: 50px;
     }
     
-    .banner .buttons button{
+    .banner .buttons{
         padding: 5px 15px;
-        margin: 0 5px 0 0;
+        margin: 10px 5px 0 0;
     }
 }
 
 /* Start services */
 .services{
     text-align: center;
-    padding-bottom: 100px;
+    padding: 100px 0;
 }
 
 .services img{
@@ -311,9 +314,79 @@ nav .hire-btn:hover{
 }
 
 .services .service{
-    padding: 0 40px;
+    padding: 10px 40px;
+    transition: 0.3s;
+}
+
+.services .service:hover{
+    box-shadow: 0px 0px 10px 0 rgba(0, 0, 0, 0.2);
 }
 /* End services */
+
+/* Start about */
+.about{
+    margin-bottom: 100px;
+    background-color: #fcfcfc;
+    padding: 50px 0;
+}
+
+.about .title h3{
+    color: var(--primary-color);
+    padding: 0px 0px 20px 30px;
+    background-color: transparent;
+    font-weight: 700 !important;
+    font-size: 22px;
+}
+
+.about .contents{
+    padding: 0px 30px;
+    border-left: 2px solid #bababa
+}
+
+.about .contents .box{
+    position: relative;
+    padding: 20px;
+    border: 1px solid #eaeaea;
+    background-color: #FFF;
+    margin-bottom: 20px;
+}
+
+.about .contents .box::before{
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    right: calc(100% + 24px);
+    top: -1px;
+    background-color: var(--primary-color);
+    border: 2px solid #FFF;
+}
+
+.about .contents .box h4{
+    position: relative;
+    color: var(--primary-color);
+    font-size: 19px;
+}
+
+.about .contents .box h3{
+    font-size: 19px;
+    padding: 10px 0px 6px;
+    color: #444;
+}
+
+.about .contents .box p{
+    color: #666;
+    line-height: 1.2;
+    font-size: 17px;
+}
+
+@media(max-width: 768px){
+    .about .about-box{
+        margin-top: 30px;
+    }
+}
+/* End about */
 
 /* Start my skills */
 .skill-box{
@@ -406,7 +479,8 @@ nav .hire-btn:hover{
 
 /* Start portfolio */
 .portfolio{
-    margin-top: 200px;
+    padding-top: 100px;
+    margin-top: 100px;
 }
 
 .portfolio-nav{
@@ -577,7 +651,7 @@ figure:hover figcaption .sub-title{
     background-attachment: fixed;
     padding: 150px 0;
     text-align: center;
-    margin: 200px 0;
+    margin-top: 200px;
 }
 
 .hire-me h4{
@@ -603,15 +677,23 @@ figure:hover figcaption .sub-title{
     background-color: var(--secondry-color);
     border: none;
 }
+
+@media(max-width: 576px){
+    .hire-me h4{
+        font-size: 30px;
+        padding: 0 40px;
+    }
+}
 /* End hire me */
 
 /* start testimonials */
 .testimonials{
     margin-bottom: 200px;
+    padding-top: 100px;
     position: relative;
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     overflow: hidden;
 }
 
@@ -627,6 +709,10 @@ figure:hover figcaption .sub-title{
     padding-top: 50px !important;
 }
 
+.testimonial-boxes{
+    /* margin: 0 20px; */
+}
+
 .testimonial-box{
     border-radius: 10px;
     margin-bottom: 5%;
@@ -634,7 +720,6 @@ figure:hover figcaption .sub-title{
     box-shadow: 0 5px 10px rgba(154,160,185,.05), 0 15px 40px rgba(166,173,201,.2);
     padding: 25px;
     cursor: pointer;
-    display: flex;
     position: relative;
 }
 
