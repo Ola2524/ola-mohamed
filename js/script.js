@@ -80,7 +80,7 @@ let calcScrollValue = () =>{
         document.documentElement.scrollTop = 0;
     });
     
-    scrollProgress.style.background = `conic-gradient(#5271FF ${scrollValue}%, #d7d7d7 ${scrollValue}%)`
+    scrollProgress.style.background = `conic-gradient(#3996ff ${scrollValue}%, #d7d7d7 ${scrollValue}%)`
 }
 
 window.onscroll = calcScrollValue;
@@ -108,8 +108,6 @@ $(document).ready(function(){
 
 let previewPortfolio = document.querySelector('.portfolio-preview')
 let previewBox = document.querySelectorAll('.portfolio-preview .preview')
-
-console.log(document.querySelectorAll('.portfolio figure figcaption::after'));
 
 document.querySelectorAll('.portfolio figure').forEach(box => {
     box.onclick = () =>{
