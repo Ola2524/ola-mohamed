@@ -880,6 +880,12 @@ h4 {
   }
 }
 
+@media (max-width: 768px) {
+    .service {
+        margin-top: 25px;
+    }
+}
+
 @media (max-width: 700px) {
   .testimonials-col img {
     margin-left: 0px;
@@ -960,9 +966,6 @@ footer a:hover {
     width: 100%;
     max-width: 100%;
     margin-bottom: 30px;
-  }
-  .portfolio figure {
-    height: 180px;
   }
 }
 
